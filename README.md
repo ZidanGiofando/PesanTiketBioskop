@@ -3,8 +3,8 @@
 ## Identitas Mahasiswa
 | Nama | NIM |
 |------|-----|
-| [Nama Mahasiswa] | [NIM] |
-| [Nama Mahasiswa 2] | [NIM 2] *(jika kelompok)* |
+| [Zidan Giofando] | [2411500834] |
+| [Fayruz Azzuhri] | [2411500024] |
 
 ---
 
@@ -76,16 +76,6 @@ app/src/main/
    - Email → membuka app email dengan draft otomatis
    - Call → membuka dialer untuk menghubungi bioskop
    - Website → membuka browser ke website bioskop
-
----
-
-## Cara Menjalankan
-
-1. Clone repository ini
-2. Buka di **Android Studio** (versi Giraffe / 2022.3.1 ke atas)
-3. Sync Gradle
-4. Build APK: **Build → Build Bundle(s) / APK(s) → Build APK(s)**
-5. Install APK ke perangkat Android (min. API 21 / Android 5.0)
 
 ---
 

@@ -177,6 +177,3 @@ PesanTiketBioskop/
 | **Password** | Minimal 4 karakter, harus cocok dengan konfirmasi |
 
 ---
-## 📄 Lisensi
-
-Proyek ini dibuat untuk keperluan tugas akademik. Seluruh hak cipta dimiliki oleh pengembang.

@@ -31,6 +31,7 @@ public class ResultActivity extends AppCompatActivity {
         final String phone      = intent.getStringExtra("phone");
         final String film       = intent.getStringExtra("film");
         final String tanggal    = intent.getStringExtra("tanggal");
+        final String jam        = intent.getStringExtra("jam");
         final String kursi      = intent.getStringExtra("kursi");
         final int hargaKursi    = intent.getIntExtra("harga_kursi", 0);
         final int jumlah        = intent.getIntExtra("jumlah", 1);
@@ -48,6 +49,7 @@ public class ResultActivity extends AppCompatActivity {
                         "No. HP       : " + phone + "\n\n" +
                         "Film         : " + film + "\n" +
                         "Tanggal      : " + tanggal + "\n" +
+                        "Jam          : " + jam + "\n" +
                         "Jenis Kursi  : " + kursi + " (" + rupiah.format(hargaKursi) + "/tiket)\n" +
                         "Jumlah Tiket : " + jumlah + " tiket\n\n" +
                         "Extras       : " + extras + "\n" +

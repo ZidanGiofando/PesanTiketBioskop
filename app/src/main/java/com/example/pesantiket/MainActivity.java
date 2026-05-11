@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private RadioGroup rgJam;
     private CheckBox cbPopcorn, cbMinuman, cbCombo;
     private TextView tvTanggal;
-    private Button btnTanggal, btnPesan, btnHistory;
+    private Button btnTanggal, btnPesan;
     private ImageView ivPoster;
 
     private String selectedDate = "";
@@ -74,15 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnPesan.setOnClickListener(v -> validateAndSubmit());
 
-        btnHistory.setOnClickListener(v -> {
 
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.fragmentContainer,
-                            new HistoryFragment())
-                    .commit();
-
-        });
     }
 
     private void initViews() {
@@ -100,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
         btnTanggal = findViewById(R.id.btnTanggal);
         btnPesan = findViewById(R.id.btnPesan);
         ivPoster = findViewById(R.id.ivPoster);
-        btnHistory = findViewById(R.id.btnHistory);
 
         sharedPreferences = getSharedPreferences("PesanTiket", MODE_PRIVATE);
     }
@@ -333,39 +324,6 @@ public class MainActivity extends AppCompatActivity {
                 .setCancelable(false)
 
                 .setPositiveButton("Konfirmasi", (dialog, which) -> {
-
-                    // History
-                    String riwayatBaru =
-                            "🎬 " + finalFilm + "\n" +
-                                    "📅 " + selectedDate + "\n" +
-                                    "🕒 " + jamTayang + "\n" +
-                                    "💺 " + kursi + "\n" +
-                                    "🎟️ " + finalJumlah + " tiket\n\n";
-
-                    String historyLama =
-                            sharedPreferences.getString("history_data", "");
-
-                    String gabung = riwayatBaru + historyLama;
-
-                    // Batas maksimal 3 history
-                    String[] splitHistory = gabung.split("\n\n");
-
-                    StringBuilder limitedHistory = new StringBuilder();
-
-                    for (int i = 0; i < splitHistory.length && i < 3; i++) {
-                        limitedHistory.append(splitHistory[i])
-                                .append("\n\n");
-                    }
-
-                    sharedPreferences.edit()
-                    .putString("history_data", limitedHistory.toString())
-                    .apply();
-
-                    getSupportFragmentManager()
-                            .beginTransaction()
-                            .replace(R.id.fragmentContainer,
-                                    new HistoryFragment())
-                            .commit();
 
                     // Kirim data ke ResultActivity
                     Intent intent = new Intent(this, ResultActivity.class);

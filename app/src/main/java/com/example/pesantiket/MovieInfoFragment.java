@@ -25,7 +25,7 @@ public class MovieInfoFragment extends Fragment {
                 "BIOSKOP CINEMAX JAKARTA\n" +
                         "Jl. Sudirman No. 1, Jakarta Selatan\n\n" +
                         "JAM TAYANG:\n" +
-                        "10:00 | 13:00 | 16:00 | 19:00 | 21:30\n\n" +
+                        "10:00 | 13:00 | 16:00 | 19:00\n\n" +
                         "Hotline: (021) 2123-4567"
         );
 
